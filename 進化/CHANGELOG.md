@@ -1,6 +1,11 @@
 # 規則變更紀錄
 > 每次自我進化或用戶決定引致的規則變更｜新條目加在最上方｜撤回：`git log --grep "CL-編號"` 找 commit → `git revert`（CL-004 起一條 CL＝一個 commit）
 
+## CL-012｜2026-11-22｜AGENTS 已知陷阱、進化守則 §三、CLAUDE.md
+- T2（報告命名漂移，6 次）按 §二「陷阱 ≥2 次」加入 AGENTS 已知陷阱
+- §三「修改到哪裡」加「報告命名／存放 → 驗證報告/說明.md」；CLAUDE.md 可 commit 範圍加入該檔，並註明設定檔須用戶同意才改
+- 觸發：專案審閱（用戶批准）；CL-003 落點與 §二、CLAUDE.md 範圍不一致
+
 ## CL-011｜2026-11-22｜進化守則 §零 §三 §五、CHANGELOG、AGENTS 維護規則、/verify、/evolve
 - 明文「一條 CL＝一個 commit」，commit 訊息須含 CL 編號，以 `git log --grep` 找回後 revert
 - 補記 CL-000–003 的 commit：CL-001／002 同屬 ac6ed0f、CL-003 在非進化 commit 16b608a，均不能單獨 revert
