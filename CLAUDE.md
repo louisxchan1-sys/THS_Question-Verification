@@ -6,6 +6,7 @@
 ## Claude Code 適配說明
 
 - 回應及報告一律用繁體中文（香港用語）。
+- 合併與部署權限：用戶長期授權，內容及界線由 `.claude/hooks/session-start.sh` 於每次開 session 注入（2026-11-24 決策紀錄）。
 - 斜線指令：`/make-paper <要求>` 出卷（草稿→自驗→確認→DOCX）｜`/verify <檔案>` 單份驗證｜`/batch-verify <檔案…>` 批量驗證｜`/evolve` 手動觸發規則進化。
 - 出卷草稿及成品寫入 `試卷輸出/`；待驗文件放 `待驗證/`；報告與修訂版輸出到 `驗證報告/<子資料夾>/`。三者均**不入 git**（校內試卷），完成後提醒用戶同步回 Google Drive。
 - docx 讀取：用 `python-docx` 或 `pandoc` 轉文字，表格須逐格讀出；讀取不完整時按 AGENTS.md「已知陷阱」處理。
